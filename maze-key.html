@@ -16,10 +16,18 @@
     </nav>
     <div class="content">
         <h1>MAZE KEY</h1>
-        <img src="key.png" alt="Maze Key" class="maze-image">
+        <img src="key.png" alt="Maze Key" class="maze-image" onerror="console.log('Error: key.png failed to load. Check file name, path, or upload.'); this.alt='Image failed to load. Please check the file.';">
     </div>
     <footer>
         <p>© 2025 by Harvey Walter.</p>
     </footer>
+
+    <script>
+        // Check if the user is authenticated
+        if (localStorage.getItem("authenticated") !== "true") {
+            // If not authenticated, redirect to index.html
+            window.location.href = "index.html";
+        }
+    </script>
 </body>
 </html>
